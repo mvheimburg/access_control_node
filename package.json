@@ -1,14 +1,30 @@
 {
-  "name": "acces-control-node",
-  "version": "0.0.0",
-  "private": true,
+  "name": "access_control_node",
+  "version": "1.0.0",
+  "description": "A nodejs wrapper to run myy flutter access control as a home assisttant add-on",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node ./bin/www"
   },
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "^4.16.4",
-    "morgan": "~1.9.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvheimburg/access_control_node.git"
+  },
+  "keywords": [
+    "access",
+    "lock",
+    "home-assistant"
+  ],
+  "author": "mvheimburg",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mvheimburg/access_control_node/issues"
+  },
+  "homepage": "https://github.com/mvheimburg/access_control_node#readme"
 }
