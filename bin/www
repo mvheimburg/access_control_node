@@ -3,7 +3,6 @@
 /**
  * Module dependencies.
  */
-var forward = require('http-forward')
 var app = require('../app');
 var debug = require('debug')('access-control-node:server');
 var http = require('http');
@@ -12,8 +11,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-var proxy_port = normalizePort(process.env.PROXY_PORT || '5000');
+var port = normalizePort(process.env.PORT || '8099');
 app.set('port', port);
 
 /**
@@ -21,19 +19,12 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
-var proxy = http.createServer(function (req, res) {
-  // Define proxy config params
-  req.forward = { target: '127.0.0.1:5000' }
-  forward(req, res)
-})
- 
+
 
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-
-proxy.listen(5000)
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
