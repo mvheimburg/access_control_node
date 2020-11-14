@@ -25948,7 +25948,7 @@ kN:function(){var s=0,r=P.ag(t.H),q=this,p,o
 var $async$kN=P.aa(function(a,b){if(a===1)return P.ad(b,r)
 while(true)switch(s){case 0:P.fe("prover dingdong")
 s=2
-return P.at(G.a6W("https://127.0.0.1:5000/resources/data/all"),$async$kN)
+return P.at(G.a6W("http://homeassistant.local/hassio/local_access_control/resources/data/all"),$async$kN)
 case 2:p=b
 if(p.b===200){o=C.bj.wU(0,B.a6Q(U.a5g(p.e).c.a.i(0,"charset")).da(0,p.x),null)
 P.fe(o)
